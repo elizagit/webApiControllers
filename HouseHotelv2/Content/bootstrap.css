@@ -337,6 +337,7 @@ textarea {
 a {
   color: white;
   text-decoration: none;
+  
 }
 
 a:hover,
@@ -427,6 +428,7 @@ cite {
 
 .text-muted {
   color: #999999;
+  font-size: 36px;
 }
 
 .text-primary {
@@ -516,12 +518,12 @@ h1,
 
 h2,
 .h2 {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 h4,
@@ -6814,3 +6816,4 @@ td.visible-print {
     display: none !important;
   }
 }
+

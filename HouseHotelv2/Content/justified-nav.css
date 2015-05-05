@@ -1,6 +1,6 @@
 ﻿body {
   padding-top: 20px;
-  background-color: lightblue;
+  background-color: #BBACC9;
   overflow: scroll;
 }
 
@@ -17,8 +17,11 @@
   background-color: transparent;
 }
 .jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+   background-color: grey;
+    border: medium none;
+    font-size: 21px;
+    padding: 14px 24px;
+}
 }
 
 /* Customize the nav-justified links to be fill the entire space of the .navbar */

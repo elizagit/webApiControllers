@@ -23,7 +23,7 @@ namespace HouseHotelv2.Controllers
             return db.Reservations;
         }
 
-        // GET: api/Reservations/5
+        // GET: api/Reservations/1
         [ResponseType(typeof(Reservation))]
         public async Task<IHttpActionResult> GetReservation(string id)
         {
@@ -36,45 +36,14 @@ namespace HouseHotelv2.Controllers
             return Ok(reservation);
         }
 
-        // PUT: api/Reservations/5
-        [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutReservation(string id, Reservation reservation)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != reservation.ReservationID)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(reservation).State = EntityState.Modified;
-
-            try
-            {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ReservationExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
-        }
-
+     
+        [HttpPost]
         // POST: api/Reservations
         [ResponseType(typeof(Reservation))]
         public async Task<IHttpActionResult> PostReservation(Reservation reservation)
         {
+            //Add new reservation
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

@@ -31,7 +31,7 @@ namespace HouseHotelv2.Controllers
         // .../api/properties?country=italy
         public IHttpActionResult GetPropertiesByCountry(String country)
         {
-            // LINQ query, find matching entries for name
+            // LINQ query, find matching entries for  country
             var entries = db.Properties.Where(p => p.Country.ToUpper() == country.ToUpper());
             if (entries == null)
             {
@@ -42,7 +42,7 @@ namespace HouseHotelv2.Controllers
        // .../api/properties?description=caravan
         public IHttpActionResult GetPropertiesByType(String description)
         {
-            // LINQ query, find matching entries for caravan
+            // LINQ query, find matching entries for description
             var entries = db.Properties.Where(p => p.Unit_description.ToUpper() == description.ToUpper());
             if (entries == null)
             {
@@ -53,7 +53,7 @@ namespace HouseHotelv2.Controllers
         // .../api/properties?bedrooms=3
         public IHttpActionResult GetPropertiesByNoOfBedrooms(String bedrooms)
         {
-            // LINQ query, find matching entries for caravan
+            // LINQ query, find matching entries for bedrooms
             var entries = db.Properties.Where(p => p.Number_of_Bedrooms.ToUpper() == bedrooms.ToUpper());
             if (entries == null)
             {
@@ -64,7 +64,7 @@ namespace HouseHotelv2.Controllers
         // .../api/properties?availability=1
         public IHttpActionResult GetAvailability(String availability)
         {
-            // LINQ query, find matching entries for caravan
+            // LINQ query, find matching entries for availability
             var entries = db.Properties.Where(p => p.Availability.ToUpper() == availability.ToUpper());
             if (entries == null)
             {
